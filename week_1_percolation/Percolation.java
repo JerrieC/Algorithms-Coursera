@@ -1,11 +1,7 @@
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 /**
- * To model a percolation system.
- *
  * @author Jiayu Chen
- * @purpose
- * @guide
  * @since 07/03/2018
  */
 public class Percolation {
@@ -27,7 +23,7 @@ public class Percolation {
   /**
    * create n-by-n grid, with all sites blocked.
    *
-   * @param n grid row's or column's number
+   * @param
    */
   public Percolation(final int n) {
     if (n <= 0) {
@@ -50,8 +46,8 @@ public class Percolation {
   /**
    * open site (row, col) if it is not open already.
    *
-   * @param row the index of a site's row
-   * @param col the index of a site's column
+   * @param row 
+   * @param col 
    */
   public void open(final int row, final int col) {
     checkIndex(row, col);
@@ -105,9 +101,9 @@ public class Percolation {
   /**
    * is site (row, col) open.
    *
-   * @param row the index of a site's row
-   * @param col the index of a site's column
-   * @return open state of site
+   * @param row 
+   * @param col
+   * @return
    */
   public boolean isOpen(final int row, final int col) {
     checkIndex(row, col);
@@ -117,9 +113,9 @@ public class Percolation {
   /**
    * whether the site (row, col) is full.
    *
-   * @param row the index of a site's row
-   * @param col the index of a site's column
-   * @return full state of site
+   * @param row
+   * @param col
+   * @return full 
    */
   public boolean isFull(final int row, final int col) {
     checkIndex(row, col);
@@ -129,7 +125,7 @@ public class Percolation {
   /**
    * number of open sites.
    *
-   * @return number of open sites
+   * @return 
    */
   public int numberOfOpenSites() {
     return numberOfOpenSites;
@@ -138,7 +134,7 @@ public class Percolation {
   /**
    * whether the system percolate.
    *
-   * @return percolate state of grid
+   * @return 
    */
   public boolean percolates() {
     return percolates;
@@ -147,9 +143,9 @@ public class Percolation {
   /**
    * calculate the index of a site using it's row and column index.
    *
-   * @param row the index of a site's row
-   * @param col the index of a site's column
-   * @return site index
+   * @param row 
+   * @param col 
+   * @return 
    */
   private int index(final int row, final int col) {
     checkIndex(row, col);

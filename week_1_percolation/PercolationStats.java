@@ -2,11 +2,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 
 /**
- * To perform a series of computational experiments.
- *
  * @author Jiayu Chen
- * @purpose
- * @guide
  * @since 07/03/2018
  */
 public class PercolationStats {
@@ -19,8 +15,8 @@ public class PercolationStats {
   /**
    * perform trials independent experiments on an n-by-n grid.
    *
-   * @param n      number of site in one grid edge
-   * @param trials number of trials
+   * @param n      
+   * @param trials
    */
   public PercolationStats(final int n, final int trials) {
     if (n <= 0 || trials <= 0) {
@@ -43,7 +39,7 @@ public class PercolationStats {
   /**
    * sample mean of percolation threshold.
    *
-   * @return ample mean of percolation threshold
+   * @return 
    */
   public double mean() {
     return StdStats.mean(thresholds);
@@ -52,7 +48,7 @@ public class PercolationStats {
   /**
    * sample standard deviation of percolation threshold.
    *
-   * @return sample standard deviation of percolation threshold
+   * @return 
    */
   public double stddev() {
     if (trialsNum == 1) {
@@ -65,7 +61,7 @@ public class PercolationStats {
   /**
    * low endpoint of 95% confidence interval.
    *
-   * @return low endpoint of 95% confidence interval
+   * @return 
    */
   public double confidenceLo() {
     return mean() - CAL_CONFIDENCE_INTERVAL * stddev() / Math.sqrt(trialsNum);
@@ -74,7 +70,7 @@ public class PercolationStats {
   /**
    * high endpoint of 95% confidence interval.
    *
-   * @return high endpoint of 95% confidence interval
+   * @return 
    */
   public double confidenceHi() {
     return mean() + CAL_CONFIDENCE_INTERVAL * stddev() / Math.sqrt(trialsNum);
