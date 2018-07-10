@@ -25,7 +25,7 @@ public class Percolation {
    *
    * @param
    */
-  public Percolation(final int n) {
+  public Percolation(int n) {
     if (n <= 0) {
       throw new IllegalArgumentException();
     }
@@ -49,7 +49,7 @@ public class Percolation {
    * @param row 
    * @param col 
    */
-  public void open(final int row, final int col) {
+  public void open(int row, int col) {
     checkIndex(row, col);
     boolean bottom = false;
     int index = index(row, col);
@@ -105,7 +105,7 @@ public class Percolation {
    * @param col
    * @return
    */
-  public boolean isOpen(final int row, final int col) {
+  public boolean isOpen(int row, int col) {
     checkIndex(row, col);
     return gridOpen[row - 1][col - 1];
   }
@@ -117,7 +117,7 @@ public class Percolation {
    * @param col
    * @return full 
    */
-  public boolean isFull(final int row, final int col) {
+  public boolean isFull(int row, int col) {
     checkIndex(row, col);
     return isOpen(row, col) && uf.connected(indexOfFirst, index(row, col));
   }
@@ -147,7 +147,7 @@ public class Percolation {
    * @param col 
    * @return 
    */
-  private int index(final int row, final int col) {
+  private int index(int row, int col) {
     checkIndex(row, col);
     return (row - 1) * gridSize + col - 1;
   }

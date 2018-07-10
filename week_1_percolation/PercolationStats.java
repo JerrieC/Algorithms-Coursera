@@ -18,7 +18,7 @@ public class PercolationStats {
    * @param n      
    * @param trials
    */
-  public PercolationStats(final int n, final int trials) {
+  public PercolationStats(int n, int trials) {
     if (n <= 0 || trials <= 0) {
       throw new IllegalArgumentException();
     }
