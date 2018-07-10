@@ -1,5 +1,4 @@
 import java.util.Iterator;
-
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
@@ -14,7 +13,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
   public RandomizedQueue() {
     size = 0;
     queue = (Item[]) new Object[1];
-
   }
 
   /**
@@ -71,7 +69,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
     int random = StdRandom.uniform(size);
     Item item = queue[random];
-    if (random !=size-1) queue[random] = queue[--size];
+    size--;
+    if (random != size) queue[random] = queue[size];
     queue[size] = null;
     //here without n>0. wrong.
     if (size > 0 && size == queue.length / 4) {
